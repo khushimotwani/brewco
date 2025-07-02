@@ -3,13 +3,12 @@
 <img src="assets/icon.png" alt="Brewco Logo" width="128" height="128">
 
 ```
-    ( (
-     ) )
-  ........
-  |      |]   ☕ BREWCO ☕
-  \      /    Programming 
-  Language
-   `----'     
+     ( (
+      ) )
+   ........
+   |      |]   ☕ BREWCO ☕
+   \      /    Programming Language
+    `----'     
 ```
 
 # ☕ Brewco ☕
