@@ -2,15 +2,6 @@
 
 <img src="assets/icon.png" alt="Brewco Logo" width="128" height="128">
 
-```
-     ( (
-      ) )
-   ........
-   |      |]   ☕ BREWCO ☕
-   \      /    Programming Language
-    `----'     
-```
-
 # ☕ Brewco ☕
 ### *A delightfully coffee-themed programming language that makes coding as enjoyable as your morning brew!*
 
