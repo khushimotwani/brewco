@@ -1,0 +1,26 @@
+# Source files
+src/**
+*.ts
+tsconfig.json
+
+# Build files
+out/test/**
+out/*.map
+out/**/*.map
+
+# Node.js
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Editor
+.vscode/
+.vscode-test/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Other
+*.vsix
+.gitignore 

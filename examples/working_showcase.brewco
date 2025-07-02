@@ -1,0 +1,204 @@
+🎀 ===== BREWCO PROGRAMMING LANGUAGE SHOWCASE =====
+🎀 Welcome to the ultimate Brewco experience!
+🎀 Created by Khushi Motwani with endless coffee love ☕
+
+🎀 === SECTION 1: BASIC VARIABLES ===
+
+beans greeting pour_in "Welcome to Brewco! ☕"
+beans version pour_in "1.0.0"
+beans coffee_strength pour_in 9
+beans is_brewing pour_in true
+
+pourout greeting
+pourout "Version:", version
+pourout "Coffee strength:", coffee_strength
+pourout "Currently brewing:", is_brewing
+
+🎀 === SECTION 2: MATHEMATICAL OPERATIONS ===
+
+beans base_price pour_in 4.50
+beans tax_rate pour_in 0.18
+
+beans tax_amount pour_in base_price brew_op tax_rate
+beans total_price pour_in base_price add tax_amount
+
+pourout "Base price: $", base_price
+pourout "Tax amount: $", tax_amount
+pourout "Total price: $", total_price
+
+🎀 === SECTION 3: STRING OPERATIONS ===
+
+beans first_name pour_in "Khushi"
+beans last_name pour_in "Motwani"
+
+beans full_name pour_in brew_blend(first_name, " ")
+full_name pour_in brew_blend(full_name, last_name)
+
+beans name_length pour_in string_length(full_name)
+
+pourout "Full name:", full_name
+pourout "Name length:", name_length
+
+🎀 === SECTION 4: TYPE CHECKING ===
+
+beans is_number_check pour_in is_number(coffee_strength)
+beans is_string_check pour_in is_string(full_name)
+beans is_bool_check pour_in is_boolean_bean(is_brewing)
+
+pourout "Is coffee_strength a number?", is_number_check
+pourout "Is full_name a string?", is_string_check
+pourout "Is is_brewing a boolean?", is_bool_check
+
+🎀 === SECTION 5: ARITHMETIC OPERATORS ===
+
+beans num_a pour_in 10
+beans num_b pour_in 3
+
+beans addition_result pour_in num_a add num_b
+beans subtraction_result pour_in num_a sip num_b
+beans multiplication_result pour_in num_a brew_op num_b
+beans division_result pour_in num_a pour_op num_b
+
+pourout "10 + 3 =", addition_result
+pourout "10 - 3 =", subtraction_result
+pourout "10 * 3 =", multiplication_result
+pourout "10 / 3 =", division_result
+
+🎀 === SECTION 6: COMPARISON OPERATORS ===
+
+beans val_1 pour_in 5
+beans val_2 pour_in 5
+beans val_3 pour_in 8
+
+beans are_equal pour_in val_1 same_blend val_2
+beans are_different pour_in val_1 different_blend val_3
+beans is_greater pour_in val_3 more_caffeine val_1
+beans is_lesser pour_in val_1 less_caffeine val_3
+
+pourout "5 == 5:", are_equal
+pourout "5 != 8:", are_different
+pourout "8 > 5:", is_greater
+pourout "5 < 8:", is_lesser
+
+🎀 === SECTION 7: LOGICAL OPERATORS ===
+
+beans is_open pour_in true
+beans has_coffee pour_in true
+beans is_morning pour_in false
+
+beans can_serve pour_in is_open with has_coffee
+beans should_visit pour_in is_morning or is_open
+
+pourout "Can serve coffee:", can_serve
+pourout "Should visit:", should_visit
+
+🎀 === SECTION 8: CONDITIONAL STATEMENTS ===
+
+beans current_strength pour_in 8
+
+taste current_strength more_caffeine 7 {
+    pourout "Strong coffee detected!"
+    taste current_strength more_caffeine 9 {
+        pourout "EXTRA STRONG! Perfect for coding!"
+    } otherwise {
+        pourout "Good strength for morning brew"
+    }
+} otherwise {
+    pourout "Mild coffee for evening sipping"
+}
+
+🎀 === SECTION 9: LOOPS ===
+
+beans counter pour_in 0
+steep counter less_caffeine 3 {
+    beans current_count pour_in counter add 1
+    pourout "Brewing cup number:", current_count
+    counter pour_in current_count
+}
+
+🎀 === SECTION 10: FUNCTIONS ===
+
+brew calculate_tip(amount, percentage) {
+    beans tip_decimal pour_in percentage pour_op 100
+    beans tip_amount pour_in amount brew_op tip_decimal
+    serve tip_amount
+}
+
+brew greet_customer(name) {
+    beans message pour_in brew_blend("Welcome ", name)
+    message pour_in brew_blend(message, " to our coffee shop!")
+    serve message
+}
+
+beans bill_amount pour_in 25.50
+beans tip_result pour_in calculate_tip(bill_amount, 18)
+beans customer_greeting pour_in greet_customer("Sarah")
+
+pourout "Bill amount: $", bill_amount
+pourout "Tip (18%): $", tip_result
+pourout customer_greeting
+
+🎀 === SECTION 11: MORE NATIVE FUNCTIONS ===
+
+beans random_value pour_in random_bean()
+beans current_time pour_in brewing_time()
+beans temp_value pour_in perfect_temperature(98.5)
+
+pourout "Random value:", random_value
+pourout "Current time:", current_time
+pourout "Perfect temperature:", temp_value
+
+🎀 === SECTION 12: ADVANCED MATH ===
+
+beans negative_num pour_in -15
+beans absolute_value pour_in absolute_aroma(negative_num)
+beans square_root pour_in root_drip(25)
+beans rounded_up pour_in round_up_the_grounds(4.3)
+beans rounded_down pour_in settle_the_grounds(4.7)
+
+pourout "Absolute value of -15:", absolute_value
+pourout "Square root of 25:", square_root
+pourout "Round up 4.3:", rounded_up
+pourout "Round down 4.7:", rounded_down
+
+🎀 === SECTION 13: FILE SYSTEM TEST ===
+
+beans file_exists pour_in recipe_exists("test_simple.brewco")
+taste file_exists {
+    pourout "File system is working! ✅"
+} otherwise {
+    pourout "File system test result:", file_exists
+}
+
+🎀 === FINAL SUMMARY ===
+
+beans features_tested pour_in 13
+beans total_functions pour_in 25
+
+pourout ""
+pourout "🎉 =========================================="
+pourout "🏆 BREWCO SHOWCASE COMPLETE!"
+pourout "🎉 =========================================="
+pourout ""
+pourout "📊 FEATURES DEMONSTRATED:", features_tested
+pourout "⚡ NATIVE FUNCTIONS USED:", total_functions
+pourout ""
+pourout "✅ Variables (String, Number, Boolean)"
+pourout "✅ Mathematical Operations"
+pourout "✅ String Manipulation"
+pourout "✅ Type Checking"
+pourout "✅ Coffee-Themed Operators"
+pourout "✅ Comparison Operators"
+pourout "✅ Logical Operators"
+pourout "✅ Conditional Statements (if/else)"
+pourout "✅ Loop Constructs (while)"
+pourout "✅ Function Definitions"
+pourout "✅ Advanced Math Functions"
+pourout "✅ File System Operations"
+pourout "✅ Random & Time Functions"
+pourout ""
+pourout "💖 CREATED WITH LOVE BY KHUSHI MOTWANI"
+pourout "☕ Every feature crafted with passion!"
+pourout "🎯 This is the complete Brewco experience!"
+pourout ""
+pourout "🎉 CONGRATULATIONS! BREWCO IS WORKING! 🎉" 

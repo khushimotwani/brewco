@@ -1,0 +1,67 @@
+# ☕ Brewco .gitignore ☕
+# @author: Khushi Motwani 💖
+# @purpose: Keep our coffee repository clean and tidy! ✨
+
+# Rust/Cargo build artifacts
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# Brewco specific files
+*.brewco.bak
+*.brewing_log
+*.spill_report
+daily_coffee_log.txt
+test_output.txt
+coffee_cache/
+.coffee_temp/
+
+# VS Code Brewco extension build artifacts
+vscode-brewco/node_modules/
+vscode-brewco/out/
+vscode-brewco/*.vsix
+vscode-brewco/package-lock.json
+
+# Development and test files
+debug_test.brewco
+test_simple.brewco
+test.brewco
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+.cache/
+.temp/
+
+# Environment and config
+.env
+.env.local
+.env.production
+config.local.*
+
+# Build artifacts
+dist/
+build/
+out/
+
+# Future Brewco package manager
+coffee_beans/
+brewco_packages/
+.brewco_cache/

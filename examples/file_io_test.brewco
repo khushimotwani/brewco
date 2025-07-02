@@ -1,0 +1,25 @@
+🎀 Coffee File I/O System Test ☕
+
+🎀 Test the new file operations
+beans test_content pour_in "Hello from the Coffee File System! ☕"
+beans test_file pour_in "test_output.txt"
+
+🎀 Test writing to a file
+beans write_result pour_in pour_to_file(test_file, test_content)
+pourout "File write result:", write_result
+
+🎀 Test checking if file exists  
+beans file_exists pour_in recipe_exists(test_file)
+pourout "File exists:", file_exists
+
+🎀 Test reading from file (if it exists)
+taste file_exists {
+    beans read_content pour_in sip_file(test_file)
+    pourout "File content:", read_content
+}
+
+🎀 Test scanning for coffee files in current directory
+beans coffee_files pour_in scan_pantry(".")
+pourout "Coffee files found:", coffee_files
+
+🎀 File I/O system is brewing! ☕✨ 

@@ -1,0 +1,19 @@
+🎀 Coffee Error Testing - Let's spill some coffee! ☕
+
+🎀 This should work fine
+beans good_coffee pour_in "Delicious!"
+pourout good_coffee
+
+🎀 Let's cause some coffee spills for better error messages
+
+🎀 Undefined variable (missing bean)
+pourout unknown_variable
+
+🎀 Wrong syntax 
+beans bad_syntax = "Should use pour_in, not ="
+
+🎀 Incomplete recipe
+taste true {
+    pourout "Missing closing brace"
+
+🎀 Show how helpful the error messages are now! 

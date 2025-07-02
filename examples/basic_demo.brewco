@@ -1,0 +1,56 @@
+beans greeting pour_in "Welcome to Brewco!"
+pourout greeting
+
+beans version pour_in "1.0.0"
+pourout "Version:", version
+
+beans coffee_strength pour_in 9
+pourout "Coffee strength:", coffee_strength
+
+beans price pour_in 4.50
+beans tax pour_in 0.50
+beans total pour_in price add tax
+pourout "Total price:", total
+
+beans discount pour_in total sip 1.00
+pourout "After discount:", discount
+
+beans doubled pour_in price brew_op 2
+pourout "Doubled price:", doubled
+
+beans half pour_in price pour_op 2
+pourout "Half price:", half
+
+beans a pour_in 5
+beans b pour_in 5
+beans equal_check pour_in a same_blend b
+pourout "5 == 5:", equal_check
+
+beans c pour_in 8
+beans different_check pour_in a different_blend c
+pourout "5 != 8:", different_check
+
+beans greater_check pour_in c more_caffeine a
+pourout "8 > 5:", greater_check
+
+beans counter pour_in 0
+steep counter less_caffeine 3 {
+    beans current pour_in counter add 1
+    pourout "Count:", current
+    counter pour_in current
+}
+
+taste coffee_strength more_caffeine 5 {
+    pourout "Strong coffee!"
+} otherwise {
+    pourout "Mild coffee"
+}
+
+beans name pour_in "Khushi"
+beans length pour_in string_length(name)
+pourout "Name length:", length
+
+beans random_val pour_in random_bean()
+pourout "Random:", random_val
+
+pourout "Basic Brewco demo complete!" 

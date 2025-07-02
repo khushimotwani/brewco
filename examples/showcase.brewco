@@ -1,0 +1,91 @@
+🎀 Brewco Showcase - Demonstrating the language features
+
+🎀 Basic variable declarations
+beans message = "Welcome to Brewco!"
+beans count = 42
+beans is_fresh = true
+
+pourout "Hello Coffee World!"
+pourout message
+pourout "Number:", count
+
+🎀 String operations using new native functions
+beans greeting = "hello world"
+beans upper_greeting = foam_up(greeting)
+beans lower_greeting = settle_down("COFFEE TIME")
+beans combined = brew_blend(upper_greeting, " - Let's brew!")
+
+pourout "Original:", greeting
+pourout "Uppercase:", upper_greeting  
+pourout "Lowercase:", lower_greeting
+pourout "Combined:", combined
+pourout "String length:", string_length(combined)
+
+🎀 Array operations
+beans my_cup = [1, 2, 3]
+beans bigger_cup = add_to_cup(my_cup, 4)
+pourout "Cup size:", cup_size(bigger_cup)
+pourout "Cup contents:", bigger_cup
+
+🎀 Math operations
+beans random_val = random_bean()
+beans sqrt_result = root_drip(16)
+beans abs_result = absolute_aroma(-5)
+
+pourout "Random value:", random_val
+pourout "Square root of 16:", sqrt_result
+pourout "Absolute value of -5:", abs_result
+
+🎀 Type checking
+pourout "Is 42 a number?", is_number(42)
+pourout "Is 'hello' a string?", is_string("hello")
+
+🎀 Object-oriented programming
+coffee_recipe Drinkable {
+    serve()
+    get_temperature()
+}
+
+bean Espresso blend Drinkable {
+    beans temperature = 85
+    beans shots = 2
+    
+    roast serve() {
+        pourout "Serving espresso with", shots, "shots at", temperature, "degrees"
+    }
+    
+    roast get_temperature() {
+        serve temperature
+    }
+}
+
+🎀 Control flow
+beans my_espresso = new Espresso()
+my_espresso.serve()
+
+taste count more_caffeine 40 {
+    pourout "That's a lot of coffee!"
+} otherwise {
+    pourout "Just the right amount"
+}
+
+🎀 Loops and iteration
+beans i = 0
+steep i less_caffeine 3 {
+    pourout "Brewing step:", i
+    i = i add 1
+}
+
+🎀 Switch statement
+beans coffee_type = 2
+roast coffee_type {
+    1: {
+        pourout "Espresso selected"
+    }
+    2: {
+        pourout "Americano selected"
+    }
+    default: {
+        pourout "Unknown coffee type"
+    }
+} 

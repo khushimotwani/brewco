@@ -1,0 +1,128 @@
+{
+  "name": "brewco",
+  "displayName": "Brewco ☕",
+  "description": "Official Brewco language support - A delightfully coffee-themed programming language that makes coding as enjoyable as your morning brew!",
+  "version": "1.0.2",
+  "publisher": "khushimotwani",
+  "author": {
+    "name": "Khushi Motwani"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user/brewco"
+  },
+  "keywords": [
+    "brewco",
+    "coffee",
+    "programming-language",
+    "compiler",
+    "interpreter",
+    "language-server",
+    "syntax-highlighting",
+    "intellisense",
+    "coffee-themed",
+    "khushimotwani",
+    "modern-language",
+    "object-oriented"
+  ],
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Themes",
+    "Snippets"
+  ],
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#8B4513",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onLanguage:brewco",
+    "onCommand:brewco.runInterpreter",
+    "onCommand:brewco.runREPL",
+    "onCommand:brewco.createNewFile"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "brewco",
+        "aliases": [
+          "Brewco",
+          "brewco",
+          "coffee",
+          "bean"
+        ],
+        "extensions": [
+          ".brewco",
+          ".coffee",
+          ".bean"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "brewco",
+        "scopeName": "source.brewco",
+        "path": "./syntaxes/brewco.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "brewco.runInterpreter",
+        "title": "☕ Run Brewco File",
+        "category": "Brewco",
+        "icon": "$(play)"
+      },
+      {
+        "command": "brewco.runREPL",
+        "title": "☕ Open Coffee Shop (REPL)",
+        "category": "Brewco",
+        "icon": "$(terminal)"
+      },
+      {
+        "command": "brewco.createNewFile",
+        "title": "☕ Create New Coffee Recipe",
+        "category": "Brewco",
+        "icon": "$(new-file)"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceExtname == .brewco",
+          "command": "brewco.runInterpreter",
+          "group": "navigation"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "brewco.createNewFile",
+          "group": "navigation"
+        }
+      ]
+    },
+    "snippets": [
+      {
+        "language": "brewco",
+        "path": "./snippets/brewco.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "npx tsc -p .",
+    "watch": "npx tsc -watch -p .",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.8.3",
+    "vsce": "^2.15.0"
+  }
+}

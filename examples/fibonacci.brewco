@@ -1,0 +1,8 @@
+🎀 Print the factorial of 5
+brew factorial(n) {
+    taste n <= 1 {
+        serve 1
+    }
+    serve n * factorial(n - 1)
+}
+pourout factorial(5)

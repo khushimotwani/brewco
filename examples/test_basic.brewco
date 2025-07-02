@@ -1,0 +1,21 @@
+🎀 Basic Brewco test file
+
+beans message = "Hello Brewco!"
+beans number = 42
+beans is_working = true
+
+pourout message
+pourout "Number:", number
+pourout "Working:", is_working
+
+🎀 Test basic math
+beans result = number add 8
+pourout "42 + 8 =", result
+
+🎀 Test string operations
+beans len = string_length(message)
+pourout "Message length:", len
+
+🎀 Test random number
+beans random = random_bean()
+pourout "Random number:", random 

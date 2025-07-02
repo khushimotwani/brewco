@@ -1,0 +1,17 @@
+coffee_recipe Drinkable {
+  serve()
+}
+
+bean Mug blend Drinkable {
+  beans whipped = 2
+  roast serve() {
+    pourout "Brewing your coffee..."
+    brew_time 2
+    pourout "Serving with", whipped, "whips!"
+  }
+}
+
+beans mug = new Mug()
+mug.serve()
+
+🎀 This is a comment and should be ignored by the interpreter

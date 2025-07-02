@@ -1,0 +1,81 @@
+🎀 Example Brewco program demonstrating OOP and other features
+
+coffee_recipe CoffeeMaker {
+    make_coffee(beans: number, water: number) -> Coffee
+    clean() -> void
+}
+
+bean CoffeeMachine {
+    beans beans = 0
+    beans water = 0
+    
+    brew constructor(beans: number, water: number) {
+        this.beans = beans
+        this.water = water
+    }
+    
+    brew make_coffee(beans: number, water: number) -> Coffee {
+        taste beans > 0 with water > 0 {
+            serve new Coffee(beans, water)
+        } otherwise {
+            serve 0
+        }
+    }
+    
+    brew clean() -> void {
+        this.beans = 0
+        this.water = 0
+    }
+}
+
+bean EspressoMachine blend CoffeeMachine {
+    private pressure: number
+    
+    brew constructor(beans: number, water: number, pressure: number) {
+        super(beans, water)
+        this.pressure = pressure
+    }
+    
+    brew make_coffee(beans: number, water: number) -> Coffee {
+        taste this.pressure >= 9 {
+            serve new Espresso(beans, water, this.pressure)
+        } otherwise {
+            serve super.make_coffee(beans, water)
+        }
+    }
+}
+
+bean Coffee {
+    beans strength = 0
+    beans volume = 0
+    
+    brew constructor(beans: number, water: number) {
+        this.strength = beans / water
+        this.volume = water
+    }
+}
+
+bean Espresso blend Coffee {
+    private pressure: number
+    
+    brew constructor(beans: number, water: number, pressure: number) {
+        super(beans, water)
+        this.pressure = pressure
+    }
+}
+
+bean Main {
+    brew main() -> void {
+        beans machine = new CoffeeMachine(100, 1000)
+        pourout "Created a coffee machine!"
+
+        beans coffee = machine.make_coffee(20, 200)
+        pourout "Made coffee: ", coffee
+
+        machine.clean()
+        pourout "Machine cleaned!"
+    }
+}
+
+beans main = new Main()
+main.main() 

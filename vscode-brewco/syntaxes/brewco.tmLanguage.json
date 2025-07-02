@@ -1,0 +1,195 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Brewco",
+  "scopeName": "source.brewco",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#native-functions"
+    },
+    {
+      "include": "#coffee-operators"
+    },
+    {
+      "include": "#identifiers"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.emoji.brewco",
+          "match": "🎀.*$",
+          "captures": {
+            "0": {
+              "name": "comment.line.emoji.brewco"
+            }
+          }
+        },
+        {
+          "name": "comment.line.double-slash.brewco",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.brewco",
+          "begin": "/\\*",
+          "end": "\\*/",
+          "patterns": [
+            {
+              "match": "\\@(author|khushi_.*?|.*?_note|.*?_signature):",
+              "name": "comment.block.documentation.brewco"
+            }
+          ]
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.brewco",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.brewco",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.brewco",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.brewco",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.decimal.brewco",
+          "match": "\\b\\d+(\\.\\d+)?\\b"
+        },
+        {
+          "name": "constant.numeric.boolean.brewco",
+          "match": "\\b(true|false)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.declaration.brewco",
+          "match": "\\b(beans|bean|brew|roast|coffee_recipe)\\b"
+        },
+        {
+          "name": "keyword.control.flow.brewco",
+          "match": "\\b(taste|otherwise|steep|pour|serve)\\b"
+        },
+        {
+          "name": "keyword.control.import.brewco",
+          "match": "\\b(grind|new)\\b"
+        },
+        {
+          "name": "keyword.control.inheritance.brewco",
+          "match": "\\b(blend)\\b"
+        },
+        {
+          "name": "keyword.control.output.brewco",
+          "match": "\\b(pourout)\\b"
+        },
+        {
+          "name": "keyword.control.special.brewco",
+          "match": "\\b(this|in)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.assignment.brewco",
+          "match": "\\b(pour_in|refill_with)\\b|="
+        },
+        {
+          "name": "keyword.operator.comparison.brewco",
+          "match": "\\b(same_blend|different_blend|more_caffeine|less_caffeine|not_weaker|not_stronger)\\b|==|!=|>|<|>=|<="
+        },
+        {
+          "name": "keyword.operator.logical.brewco",
+          "match": "\\b(with|or|no_foam)\\b|&&|\\|\\||!"
+        },
+        {
+          "name": "keyword.operator.bitwise.brewco",
+          "match": "\\b(blend_with|top_with|spice|invert|double_shot|half_caf)\\b|&|\\||\\^|~|<<|>>"
+        }
+      ]
+    },
+    "coffee-operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.arithmetic.brewco",
+          "match": "\\b(add|sip|brew_op|pour_op|grounds)\\b|\\+|-|\\*|/|%"
+        }
+      ]
+    },
+    "native-functions": {
+      "patterns": [
+        {
+          "name": "support.function.string.brewco",
+          "match": "\\b(string_length|brew_blend|foam_up|settle_down|grind_to_pieces|filter_grounds|first_sip|last_drop|perfect_extraction|coffee_strength_check)\\b"
+        },
+        {
+          "name": "support.function.array.brewco",
+          "match": "\\b(cup_size|add_to_cup|pour_together|extract_brew|reverse_pour|perfect_pour_order|coffee_filtering|bean_sorting|coffee_cupping|premium_extraction)\\b"
+        },
+        {
+          "name": "support.function.math.brewco",
+          "match": "\\b(brew_minimum|brew_maximum|perfect_temperature|root_drip|absolute_aroma|extra_shot|random_bean|brewing_time)\\b"
+        },
+        {
+          "name": "support.function.io.brewco",
+          "match": "\\b(sip_file|pour_to_file|recipe_exists|scan_pantry)\\b"
+        },
+        {
+          "name": "support.function.module.brewco",
+          "match": "\\b(brew_import|list_coffee_beans|reheat_bean|install_bean|list_brewed_beans)\\b"
+        },
+        {
+          "name": "support.function.type.brewco",
+          "match": "\\b(type_check|is_coffee_number|is_coffee_string|is_coffee_boolean|is_coffee_array|is_coffee_object|coffee_type_name)\\b"
+        },
+        {
+          "name": "support.function.utility.brewco",
+          "match": "\\b(coffee_debug|barista_help|enough_caffeine)\\b"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "name": "variable.other.brewco",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+        }
+      ]
+    }
+  }
+} 

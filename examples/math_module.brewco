@@ -1,0 +1,11 @@
+// math_module.coffeelang
+
+brew sum_it_up(a, b) {
+    serve a + b;
+}
+
+beans pi = 3.14159; 
+
+brew favorite_drink() {
+    serve "Black Coffee";
+} 

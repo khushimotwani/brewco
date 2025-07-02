@@ -1,0 +1,118 @@
+🎀 user input
+pourout "Spill the tea... or, uh, the coffee."
+beans gossip = whats_the_gossip("What's the latest? ")
+pourout "Ooh, juicy! '", gossip, "' is the talk of the town."
+
+
+🎀 Demo of Hash Maps (Objects)
+
+beans my_order = {
+    "drink": "Cappuccino",
+    "size": 12,
+    "has_foam": true
+}
+
+
+pourout "My order is a ", my_order.size, "oz ", my_order.drink
+pourout "Does it have foam?", my_order.has_foam
+
+beans empty_mug = {}
+pourout "An empty mug:", empty_mug
+
+🎀 The old code is below if you want to test it too
+
+beans i = 0
+steep i < 10 {
+    i = i + 1
+    taste i == 5 {
+        pourout "Reached five, skipping!"
+        continue
+    }
+    taste i == 8 {
+        pourout "Breaking at eight!"
+        break
+    }
+    pourout "Value: ", i
+}
+
+pourout -5
+pourout no_foam false
+pourout invert 7
+
+🎀 Demo of classic pour loop
+beans sum = 0
+pour beans i = 1; i <= 5; i = i + 1 {
+    sum = sum + i
+}
+pourout "Sum = ", sum
+
+beans day = 3
+
+roast day {
+    1 : pourout "Monday!"       🎀 any expression can follow the colon
+    2 : pourout "Tuesday!"
+    3 : pourout "Wednesday!"
+    otherwise : pourout "Weekend!"
+}
+
+🎀 try and catch 
+taste_carefully {
+    pourout "Trying to divide by zero..."
+    beans result = 10 / 0
+    pourout "This will not be printed."
+} if_spilled (the_mess) {
+    pourout "Caught a spill! The error was: '", the_mess, "'"
+}
+
+pourout "Program continues after the spill."
+
+🎀 array
+beans my_drinks = ["Espresso", "Latte", "Filter"]
+pourout "Before:", my_drinks
+
+my_drinks[1] refill_with "Cappuccino"
+
+pourout "After:", my_drinks
+
+🎀 Float testing
+beans pi = 3.14159
+beans radius = 2.5
+beans area = pi * radius * radius
+pourout "The area of a circle with radius ", radius, " is ", area
+
+beans temp_c = 20.5
+beans temp_f = (temp_c * 9.0 / 5.0) + 32.0
+pourout temp_c, " degrees Celsius is ", temp_f, " degrees Fahrenheit."
+
+🎀 Native function test
+pourout "The root drip of 64 is ", root_drip(64)
+pourout "The absolute aroma of -12.5 is ", absolute_aroma(-12.5)
+pourout "Rounding up 3.14 gives ", round_up_the_grounds(3.14)
+pourout "Settling down 3.14 gives ", settle_the_grounds(3.14)
+pourout "An extra shot for 2, 8 times, is ", extra_shot(2, 8)
+
+🎀 Module test
+beans math = grind "math_module.brewco"
+pourout "Adding 5 and 3 using our module gives: ", math.sum_it_up(5, 3)
+pourout "The value of pi from our module is: ", math.pi
+pourout "My favorite drink is: ", math.favorite_drink()
+
+// String concatenation test
+pourout "My age is: " + 25
+
+// Comparison and logical operator test
+pourout "Is 10 more caffeine than 5?", 10 > 5
+
+// Class (bean) declaration test
+bean MyMug {
+    beans content = "Empty"
+    beans size = 12
+
+    brew fill(new_content) {
+        this.content = new_content
+    }
+}
+
+// Type checking test: This should fail if uncommented
+// beans wrong_order: Number = "a string";
+
