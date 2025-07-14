@@ -2,15 +2,16 @@
   "name": "brewco",
   "displayName": "Brewco ☕",
   "description": "Official Brewco language support - A delightfully coffee-themed programming language that makes coding as enjoyable as your morning brew!",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "publisher": "khushimotwani",
   "author": {
     "name": "Khushi Motwani"
   },
+  "homepage": "https://github.com/khushimotwani/brewco/blob/main/README.md",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/user/brewco"
+    "url": "https://github.com/khushimotwani/brewco"
   },
   "keywords": [
     "brewco",
